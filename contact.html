@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUADE ESTIENNE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" >
+</head>
+<body class="proyectos">
+    <header>
+        <div class="logo-resto">
+            <a href="index.html" class="header-link">GUADE ESTIENNE</a>
+        </div>
+        <nav class="negro">
+            <!-- Ícono de hamburguesa -->
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Menú de navegación -->
+            <div class="nav-links">
+                <!-- WORK -->
+                <div class="dropdown">
+                    <span class="nav-link">WORK</span>
+                    <div class="dropdown-content">
+                        <a href="project1.html">LATIDOS ÍNTIMOS - 2024</a>
+                        <a href="project2.html">PERSONA CRISTAL - 2023</a>
+                        <a href="project3.html">ÉXTIMO - 2022</a>
+                        <a href="project4.html">GRABADO</a>
+                    </div>
+                </div>
+
+                <!-- WRITINGS -->
+                <a href="writings.html" class="nav-link">WRITINGS</a>
+
+                <!-- ABOUT -->
+                <div class="dropdown">
+                    <span class="nav-link">ABOUT</span>
+                    <div class="dropdown-content">
+                        <a href="cv.html">CV</a>
+                        <a href="bio.html">BIO</a>
+                    </div>
+                </div>
+
+                <!-- CONTACT -->
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+<!-- Contenedor principal de contacto -->
+<div class="contact-container">
+    <!-- Caja de contacto -->
+    <div class="contact-box">
+        <a href="https://instagram.com/guadeeeh" target="_blank">INSTAGRAM</a>
+        <a href="https://wa.me/5491167931650" target="_blank">WHATSAPP</a>
+        <a href="mailto:guadiest@gmail.com">MAIL</a>
+    </div>
+
+    <!-- Sección Contact -->
+    <section id="contact">
+        <form action="https://formspree.io/f/mbljegaq" method="POST" class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</div>
+</body>
+</html>
+    <script src="script.js"></script>
+</body>
+</html>
