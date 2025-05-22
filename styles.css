@@ -1,0 +1,793 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('INICIO/inicio.jpg'); /* Ruta de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    height: 100vh; /* Altura completa de la ventana */
+    width: 100%;
+    position: relative; /* Posiciona elementos encima de la imagen */
+}
+
+body.proyectos {
+    background-color: white; /* Fondo blanco */
+    background-image: none; /* Quita la imagen de fondo */
+    color: black; /* Cambia el color de texto general */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: transparent;
+}
+
+.logo-inicio {
+    font-size: 24px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+.logo-resto {
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+}
+
+.header-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    gap: 100px;
+    font-weight: 500;
+}
+.nav-links {
+    display: flex;
+    gap: 100px; /* Ajusta este valor para más o menos espacio entre los enlaces */
+    font-weight: 500;
+}
+.nav-link {
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer; /* Añadir cursor pointer para span */
+}
+
+body.proyectos .nav-link {
+    color: black; /* Cambia el color de las letras del nav a negro */
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content (siempre blanco con letras negras) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white; /* Fondo blanco */
+    min-width: 300px; /* Ancho mínimo */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    z-index: 1;
+}
+
+/* Links dentro del dropdown */
+.dropdown-content a {
+    padding: 12px 16px;
+    color: black; /* Texto negro */
+    text-decoration: none;
+    display: block;
+    background-color: white; /* Fondo blanco */
+}
+
+/* Hover en los links (sin cambiar el fondo) */
+
+/* Mostrar el menú al pasar el mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.imagen-INICIO {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/*WORK PROYECTOS*/
+
+/* ---- GALERÍA ---- */
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 70px; /* Espacio uniforme entre imágenes */
+}
+
+.gallery-item {
+    width: 160%; /* Ancho máximo de las imágenes */
+    max-width: 1200px; /* Limita el ancho para pantallas grandes */
+}
+
+.gallery-item img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    max-height: 95vh; /* Límite para evitar que sean demasiado altas */
+    object-fit: contain; /* Se ajustan sin deformarse */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:first-child {
+    margin-top: 40px; /* Espacio extra arriba */
+}
+
+.gallery-container {
+    padding-bottom: 50px; /* Añade espacio al final del contenedor */
+}
+
+/* ---- INFO DE LA IMAGEN ---- */
+.image-info {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    max-width: 1500px;
+    display: none; /* Oculto por defecto */
+    opacity: 0; /* Transición suave */
+    transition: opacity 0.3s ease-in-out;
+    text-transform: uppercase;
+    line-height: 0.8;
+}
+
+.image-info.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Estilo para la primera línea en cursiva */
+.info-first-line {
+    font-style: italic;
+}
+/* Pantallas con un ancho máximo de 768px (tablet o dispositivos medianos) */
+@media (max-width: 768px) {
+    .image-info {
+        font-size: 10px; /* Tamaño de fuente más pequeño, ajustado para tabletas */
+        left: 0px; /* Ajusta la posición hacia la izquierda */
+        padding: 8px 15px; /* Ajuste del padding para mayor confort visual */
+        line-height: 0.8; /* Aumenta el interlineado para mejor legibilidad */
+    }
+
+    /* Ajustes adicionales si quieres controlar otras propiedades */
+    .gallery-container {
+        gap: 160px;
+    }
+
+    .gallery-item {
+        width: 100%; /* Ajuste del ancho de las imágenes */
+        margin-top: 40px; /* Mantiene el margen superior entre las imágenes */
+    }
+
+    .gallery-item img {
+        max-height: 80vh; /* Ajusta la altura máxima de la imagen para evitar que sean demasiado grandes */
+    }
+
+    .gallery-item:first-child {
+        margin-top: 140px; /* Espacio extra arriba */
+    }
+
+    .gallery-container {
+        padding-bottom: 190px; /* Añade espacio al final del contenedor */
+    }
+}
+
+
+/* ABAJO DE ESTO ESTILOS DEl APARTADO WRITINGS*/
+
+/* Contenedor principal para writings */
+.writings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    text-align: center; /* Asegura que el texto esté centrado */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/* Título de la sección */
+.writings-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase; /* Convierte texto a mayúsculas */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+    color: black;
+}
+
+/* Lista de títulos */
+.writings-list {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para cada elemento de la lista */
+.writings-list li {
+    margin: 10px 0; /* Espaciado entre elementos */
+}
+
+/* Enlaces de los títulos */
+.writings-list a {
+    font-size: 24px; /* Tamaño de letra */
+    font-weight: 500;
+    text-decoration: none; /* Sin subrayado */
+    text-transform: uppercase; /* Convierte texto a mayúsculas */
+    text-decoration: underline; 
+    color: black; /* Color del texto */
+    transition: color 0.3s ease; /* Transición suave en hover */
+}
+
+/* Efecto hover para los enlaces */
+.writings-list a:hover {
+    color: gray; /* Cambia el color al pasar el mouse */
+}
+
+/*ABAJO DE ESTO ESTILOS DE LOS WRITINGS*/
+
+body.writing-page { 
+    margin: 0;;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    color: black;
+    background-color: white;
+}
+.text-container {
+    max-width: calc(100% - 40px); /* Márgenes laterales de 20px */
+    margin: 40px auto; /* Márgenes superior e inferior de 40px, centrado horizontal */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding-bottom: 40px; /* Espacio adicional debajo */
+    box-sizing: border-box; /* Asegura que el padding esté incluido dentro del ancho total */
+}
+
+
+/* Párrafos del texto */
+.text-container p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.8; /* Espaciado entre líneas */
+}
+
+/* Párrafos en cursiva */
+.italic-text {
+    font-style: italic;
+}
+
+/* Párrafo de citas */
+.text-container .citation {
+    text-align: right;
+    font-size: 18px; /* Tamaño uniforme */
+    font-style: normal; /* Normal en lugar de cursiva */
+}
+
+/* Estilo para el texto poético */
+.text-container .poetic-text {
+    text-transform: uppercase;
+    margin-top: 40px; /* Espaciado más grande si es necesario */
+    font-style: normal;
+}
+
+/* Estructura para la página de writings */
+body.writing-page {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: black;
+    background-color: white;
+}
+
+/* Contenedor de la foto principal */
+.photo-container {
+    width: 100%;
+    overflow: hidden; /* Asegura que no haya contenido fuera de límites */
+    }
+    
+/* Imagen principal */
+.main-photo {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: auto; /* Mantiene proporciones */
+    display: block; /* Evita márgenes extra alrededor de la imagen */
+}
+
+/* Pie de foto debajo de la imagen */
+.photo-caption {
+    margin: 10px 15px; /* Margen alrededor del pie de foto */
+    font-size: 14px;
+    color: black;
+    text-align: right; /* Alineado a la derecha */
+}
+
+
+
+/* Diseño Responsivo para Móviles DE TEXTOS */
+@media (max-width: 768px) {
+    .text-container {
+        max-width: 95%; /* Reduce el margen a los lados para pantallas pequeñas */
+        padding: 10px; /* Quita márgenes internos */
+        text-align: justify; /* Justifica el texto */
+    }
+
+    .photo-caption {
+        font-size: 10px; /* Pie de foto más pequeño */
+        text-align: center; /* Alineado centrado en móviles */
+    }
+    .text-container p {
+        font-size: 14px;
+        text-align: justify;
+        line-height: 1.8; /* Espaciado entre líneas */
+    }
+
+    .text-container .citation {
+        text-align: right;
+        font-size: 14px; /* Tamaño uniforme */
+        font-style: normal; /* Normal en lugar de cursiva */
+    }
+    
+}
+
+/* HAMBURGUESAAAAAAA*/
+
+/* Estilo para el icono de la hamburguesa */
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    vertical-align: middle;
+    padding: 5px
+  }
+  
+  .hamburger-icon .bar {
+    width: 25px;
+    height: 1px;
+    background-color: black;
+    border-radius: 3px;
+  }
+  
+  /* La clase show se añadirá cuando el menú de hamburguesa sea activado */
+  .dropdown-content.show {
+    display: flex; /* Muestra el submenú cuando se activa */
+  }
+  
+/* Para que el menú tenga fondo transparente y textos visibles en móvil */
+/* Menú normal */
+.nav-links {
+    display: flex;
+    gap: 100px; /* Este es el gap que usas en el menú normal */
+}
+
+/* Menú responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 10;
+        padding: 40px 20px;
+        overflow-y: auto;
+        gap: 20px; /* Este es el nuevo gap que usarás en el menú hamburguesa (más pequeño) */
+    }
+
+    /* Menú activo */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Enlaces del menú */
+    .nav-link {
+        color: black;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 10px 0;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+    }
+
+    /* Otros estilos para dropdowns y enlaces */
+    .dropdown-content {
+        display: block;
+        background-color: white;
+        color: black;
+        box-shadow: none;
+        position: relative;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        color: black;
+        font-size: 16px;
+        padding: 20px 15px;
+        text-decoration: none;
+    }
+    
+    /* Asegúrate que los enlaces del dropdown no tengan márgenes innecesarios */
+    .nav-links .dropdown-content {
+        display: block;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    /* Reducir espacio entre dropdowns */
+    .nav-links .dropdown {
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilo para el ícono de la hamburguesa */
+.hamburger-icon {
+    display: none; /* Por defecto, no visible en escritorio */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 20px; /* Ajusta según tu diseño */
+    right: 20px; /* Ajusta según tu diseño */
+    z-index: 20; /* Asegúrate de que esté encima del menú */
+}
+
+/* Barras dentro del ícono de hamburguesa */
+.hamburger-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black; /* Color visible (ajusta según necesidad) */
+    border-radius: 3px;
+}
+
+/* Mostrar la hamburguesa en móviles */
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: flex; /* Visible solo en pantallas pequeñas */
+    }
+
+    /* Ocultar el menú principal en móvil por defecto */
+    .nav-links {
+        display: none;
+    }
+
+    /* Mostrar el menú cuando está activo */
+    .nav-links.active {
+        display: flex;
+    }
+}
+/* Ícono de hamburguesa negro en páginas que no sean la home */
+body.proyectos .hamburger-icon .bar,
+body:not(.home-page) .hamburger-icon .bar {
+    background-color: black; /* Barras negras */
+}
+
+/* Ícono de hamburguesa blanco en la home */
+body.home-page .hamburger-icon .bar {
+    background-color: white; /* Barras blancas */
+}
+
+/*TEXTOS DEL CV*/
+
+/* Estilos generales del CV */
+body.cv-page {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background-color: white;
+    padding: 40px;
+}
+
+/* Sección principal del CV */
+.cv-content {
+    max-width: 1200px;
+    margin: 0 10px;
+    padding: 20px;
+    position: relative;
+}
+
+/* Estilos de las secciones */
+.cv-section {
+    margin-bottom: 40px; /* Espaciado entre secciones */
+}
+
+.cv-section h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: black;
+    padding-bottom: 5px;
+    text-align: left;  /* Alineación a la izquierda */
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.cv-section p {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+/*CADENA*/
+
+.link-icon {
+    font-size: 1em; /* Hazlo más pequeño si es necesario */
+    margin-left: 5px; /* Espacio entre texto e icono */
+    color: black; /* Blanco y negro */
+    filter: grayscale(100%); /* Asegúrate de eliminar cualquier color residual */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  a:hover .link-icon {
+    transform: scale(1.1); /* Haz que el icono crezca ligeramente */
+    opacity: 0.8; /* O reduce un poco su opacidad */
+  }
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+
+
+    .cv-content h2 {
+        font-size: 14px;  /* Ajuste de tamaño de títulos */
+    }
+
+    .cv-content p {
+        font-size: 14px;  /* Ajuste de tamaño de texto */
+    }
+}
+/* Estilos generales de la página */
+.bio-page {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px;
+}
+
+.bio-image img {
+    width: 250px;
+    object-fit: cover;
+    margin-right: 30px; /* Espacio entre la imagen y el texto */
+    margin-top: px;
+}
+
+.bio-text {
+    flex: 1;
+}
+
+.bio-text p {
+    font-size: 22px;
+    line-height: 1.5;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+  }
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .bio-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bio-image img {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .bio-text p {
+        font-size: 14px;
+        text-align: justify;
+    }
+}
+
+/*CONTACT*/ 
+
+/* Contact Info */
+.contact-box {
+    text-align: left;
+}
+
+.contact-box a {
+    display: block; /* Cada enlace en su propia línea */
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 1.5rem; /* Tamaño del texto */
+    margin: 10px 0; /* Espaciado entre enlaces */
+    transition: color 0.3s ease, transform 0.2s ease; /* Animación suave */
+    color:#000
+  }
+  
+  .contact-box a:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    text-decoration: underline;
+  }
+
+/* Formulario */
+.contact-form {
+    width: 50%;
+    background-color: #fff;
+    color: #000;
+    max-width: 800px; /* Tamaño máximo del formulario */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.contact-form button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Contenedor principal */
+.contact-container {
+    display: flex; /* Coloca los elementos en fila */
+    align-items: center; /* Alinea los elementos por la parte superior */
+    gap: 200px; /* Margen de 50px entre la caja de contacto y el formulario */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    margin-left: 350px; /* Elimina márgenes del body */
+}
+
+/* Contact Info */
+.contact-box {
+    text-align: left;
+}
+
+.contact-box a {
+    display: block; /* Cada enlace en su propia línea */
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    color: #000;
+}
+
+.contact-box a:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* Formulario */
+.contact-form {
+    background-color: #fff;
+    color: #000;
+    max-width: 800px; /* Tamaño máximo del formulario */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.contact-form button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN: Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Cambia el diseño a columna */
+        align-items: center; /* Alinea los elementos al centro */
+        gap: 20px; /* Reduce el espacio entre elementos */
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 20px; /* Espaciado interno */
+        margin: 20px;
+    }    
+    .contact-box {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        text-align: center; /* Centra el contenido */
+    }
+
+    .contact-form {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 100%; /* Ancho máximo igual al contenedor */
+    }
+}
+/* POP-UP */
+/* Fondo del pop-up */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contenido animado del cartel */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Estado visible con animación */
+.popup-content.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.popup-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.popup-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.popup-address {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-top: 15px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}

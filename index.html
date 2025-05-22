@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUADE ESTIENNE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="home-page">
+    <header>
+        <div class="logo-inicio">
+            <a href="index.html" class="header-link">GUADE ESTIENNE</a>
+        </div>
+        <nav class="blanco">
+            <!-- Ícono de hamburguesa -->
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Menú de navegación -->
+            <div class="nav-links">
+                <!-- WORK -->
+                <div class="dropdown">
+                    <span class="nav-link">WORK</span>
+                    <div class="dropdown-content">
+                        <a href="project1.html">LATIDOS ÍNTIMOS - 2024</a>
+                        <a href="project2.html">PERSONA CRISTAL - 2023</a>
+                        <a href="project3.html">ÉXTIMO - 2022</a>
+                        <a href="project4.html">GRABADO</a>
+                    </div>
+                </div>
+
+                <!-- WRITINGS -->
+                <a href="writings.html" class="nav-link">WRITINGS</a>
+
+                <!-- ABOUT -->
+                <div class="dropdown">
+                    <span class="nav-link">ABOUT</span>
+                    <div class="dropdown-content">
+                        <a href="cv.html">CV</a>
+                        <a href="bio.html">BIO</a>
+                    </div>
+                </div>
+
+                <!-- CONTACT -->
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <script src="script.js"></script>
+    <!-- POP-UP DE PRÓXIMA EXPO -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <p class="popup-title">PRÓXIMA EXPO</p>
+        <img src="INICIO/EXPO.jpg" alt="Flyer próxima exposición" class="popup-image">
+        <p class="popup-address">Av. Fleming 1543, Martinez, Bs. As.</p>
+    </div>
+</div>
+</body>
+</html>
+
