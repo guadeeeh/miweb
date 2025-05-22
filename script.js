@@ -76,14 +76,12 @@ window.onload = function () {
     const popup = document.getElementById('popup');
     const popupContent = document.querySelector('.popup-content');
 
-    popup.style.display = 'flex';
+    popup.style.display = 'flex';   // Aquí activás el pop-up
 
-    // Hace fade solo del cartel
     setTimeout(() => {
         popupContent.classList.add('show');
     }, 10);
 
-    // Cierra al hacer clic fuera del cartel
     popup.addEventListener('click', function (e) {
         if (!popupContent.contains(e.target)) {
             closePopup();
