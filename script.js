@@ -60,31 +60,4 @@ function formatDataInfo(info) {
   dropdownContent.classList.add('show'); // Abre el submenú de WORK automáticamente
 }
 
-
-function closePopup() {
-    const popup = document.getElementById('popup');
-    const popupContent = document.querySelector('.popup-content');
-
-    popupContent.classList.remove('show');
-
-    setTimeout(() => {
-        popup.style.display = 'none';
-    }, 300);
-}
-
-window.onload = function () {
-    const popup = document.getElementById('popup');
-    const popupContent = document.querySelector('.popup-content');
-
-    popup.style.display = 'flex';   // Aquí activás el pop-up
-
-    setTimeout(() => {
-        popupContent.classList.add('show');
-    }, 10);
-
-    popup.addEventListener('click', function (e) {
-        if (!popupContent.contains(e.target)) {
-            closePopup();
-        }
-    });
 };
